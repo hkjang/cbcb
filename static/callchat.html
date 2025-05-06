@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>팝업 요청</title>
+</head>
+<body>
+    <button onclick="openPopup()">AI 챗봇 팝업 열기</button>
+
+    <script>
+        function openPopup() {
+            const popup = window.open('', 'popupWindow', 'width=800,height=1000');
+            if (!popup) {
+                alert("팝업이 차단되었습니다. 팝업 차단을 해제해주세요.");
+                return;
+            }
+
+            const formHtml = `
+                <html>
+                <body onload="document.forms[0].submit()">
+                    <form method="GET" action="http://127.0.0.1:8000/">
+                        <input type="hidden" name="q" value="java sample 소스 만들어" />
+                        <input type="hidden" name="session_id" value="c21df93b-f4a4-43b1-9212-12d5fa1fca56" />
+                        요청을 전송 중입니다...
+                    </form>
+                </body>
+                </html>
+            `;
+
+            popup.document.open();
+            popup.document.write(formHtml);
+            popup.document.close();
+        }
+    </script>
+</body>
+</html>

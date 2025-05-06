@@ -1,0 +1,647 @@
+/* style.css에 다크 모드 관련 스타일 추가 */
+:root {
+    --bg-color: #f8f9fa;
+    --chat-bg: #ffffff;
+    --chat-shadow: rgba(0,0,0,0.1);
+    --user-msg-bg: #007bff;
+    --user-msg-color: white;
+    --bot-msg-bg: #f1f1f1;
+    --bot-msg-color: #212529;
+    --input-border: #ccc;
+    --btn-color: #007bff;
+    --btn-text: white;
+    --code-bg: #2d2d2d;
+    --inline-code-bg: rgba(27, 31, 35, 0.05);
+    --blockquote-border: #dfe2e5;
+    --blockquote-color: #6a737d;
+    --header-color: #333;
+    --typing-indicator: #333;
+    --table-border: #dfe2e5;
+    --table-header-bg: #f6f8fa;
+}
+
+body[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --chat-bg: #2d2d2d;
+    --chat-shadow: rgba(0,0,0,0.3);
+    --user-msg-bg: #0062cc;
+    --user-msg-color: #f0f0f0;
+    --bot-msg-bg: #3a3a3a;
+    --bot-msg-color: #e0e0e0;
+    --input-border: #444;
+    --btn-color: #0062cc;
+    --btn-text: #f0f0f0;
+    --code-bg: #1e1e1e;
+    --inline-code-bg: rgba(200, 200, 200, 0.15);
+    --blockquote-border: #4e4e4e;
+    --blockquote-color: #b0b0b0;
+    --header-color: #e0e0e0;
+    --typing-indicator: #b0b0b0;
+    --table-border: #4e4e4e;
+    --table-header-bg: #3a3a3a;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 40px;
+}
+
+.chat-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.user-message {
+    margin-top: 20px;
+    text-align: right;
+    background-color: #007bff;
+    color: white;
+    margin-left: 20%;
+    padding: 15px !important;
+    border-radius: 8px;
+}
+
+/* .bot-message 클래스 수정 */
+.bot-message {
+    text-align: left;
+    background-color: #f1f1f1;
+    color: #212529;
+    margin-right: 20%;
+    position: relative;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* 마크다운 내부 요소들을 채팅 UI에 맞게 조정 */
+.bot-message.markdown-body {
+    padding: 15px !important;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 8px;
+    max-width: 80%;
+    line-height: 1.6;
+}
+
+/* 마크다운 단락 스타일 */
+.bot-message.markdown-body p {
+    margin-bottom: 1em;
+    white-space: pre-wrap;
+}
+
+/* 마크다운 목록 아이템 여백 조정 */
+.bot-message.markdown-body li {
+    margin-bottom: 0.5em;
+}
+
+/* 줄바꿈 처리를 위한 추가 스타일 */
+.bot-message.markdown-body br {
+    display: block;
+    content: "";
+    margin-bottom: 0.5em;
+}
+
+
+/* 기존 CSS 내용은 유지하고 다음 스타일만 추가하거나 수정합니다 */
+
+/* 마크다운 단락(p 태그) 간격 조정 */
+.bot-message.markdown-body p {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em; /* 더 줄임 */
+    white-space: pre-wrap;
+}
+
+/* 단락과 목록 사이의 간격 줄이기 */
+.bot-message.markdown-body p + ul,
+.bot-message.markdown-body p + ol {
+    margin-top: -1em; /* p와 ul/ol 사이 간격 줄임 */
+}
+
+/* 목록과 단락 사이의 간격 줄이기 */
+.bot-message.markdown-body ul + p,
+.bot-message.markdown-body ol + p {
+    margin-top: -1em; /* ul/ol과 p 사이 간격 줄임 */
+}
+
+/* 목록 아이템 간격 조정 */
+.bot-message.markdown-body li {
+    margin-top: -1em;    /* li 태그 위쪽 간격 줄임 */
+    margin-bottom: 0em; /* li 태그 아래쪽 간격 줄임 */
+}
+
+/* 목록 자체의 상하 여백 줄임 */
+.bot-message.markdown-body ul,
+.bot-message.markdown-body ol {
+    margin-top: -1em;    /* 전체 목록의 위 간격 줄임 */
+    margin-bottom: 0em; /* 전체 목록의 아래 간격 줄임 */
+    padding-left: 2em;
+}
+
+/* 첫 번째 단락은 위쪽 여백 제거 */
+.bot-message.markdown-body p:first-child {
+    margin-top: 0;
+}
+
+/* 마지막 단락은 아래쪽 여백 제거 */
+.bot-message.markdown-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* 중첩 목록의 간격 조정 */
+.bot-message.markdown-body li > ul,
+.bot-message.markdown-body li > ol {
+    margin-top: -1em;
+    margin-bottom: 0em;
+}
+
+/* 헤딩 요소의 상하 여백도 줄임 */
+.bot-message.markdown-body h1,
+.bot-message.markdown-body h2,
+.bot-message.markdown-body h3,
+.bot-message.markdown-body h4,
+.bot-message.markdown-body h5,
+.bot-message.markdown-body h6 {
+    margin-top: 0.6em;
+    margin-bottom: 0.4em;
+}
+
+/* 코드 블록의 상하 여백도 줄임 */
+.bot-message.markdown-body pre {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.typing-indicator {/* 마크다운 스타일 */
+    .bot-message h1, .bot-message h2, .bot-message h3,
+    .bot-message h4, .bot-message h5, .bot-message h6 {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .bot-message p {
+        margin-bottom: 0.5em;
+    }
+
+    .bot-message code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: monospace;
+    }
+
+    .bot-message pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin-bottom: 0.5em;
+    }
+
+    .bot-message pre code {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .bot-message blockquote {
+        border-left: 3px solid #ccc;
+        padding-left: 10px;
+        margin-left: 10px;
+        color: #666;
+    }
+
+    .bot-message ul, .bot-message ol {
+        padding-left: 20px;
+    }
+
+    .bot-message table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .bot-message th, .bot-message td {
+        border: 1px solid #ddd;
+        padding: 6px;
+    }
+    display: inline-block;
+    width: 0.7em;
+    height: 1em;
+    background-color: #333;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    border-radius: 1px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding-right: 20px; /* 오른쪽 마진 추가 */
+    margin-right: 10px; /* 추가 마진 설정 */
+}
+
+input[type="submit"] {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* 마크다운 스타일 추가 */
+.markdown-body {
+    padding: 20px !important;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+/* 마크다운 내부 요소들을 채팅 UI에 맞게 조정 */
+.bot-message.markdown-body {
+    padding: 15px !important;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* 코드 블록 스타일 조정 */
+.bot-message.markdown-body pre {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2d2d2d !important;
+}
+
+/* 인라인 코드 스타일 */
+.bot-message.markdown-body code:not([class*="language-"]) {
+    background-color: rgba(27, 31, 35, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 85%;
+}
+
+/* 표 스타일 개선 */
+.bot-message.markdown-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.bot-message.markdown-body th,
+.bot-message.markdown-body td {
+    border: 1px solid #dfe2e5;
+    padding: 6px 13px;
+}
+
+.bot-message.markdown-body th {
+    background-color: #f6f8fa;
+}
+
+/* 인용구 스타일 개선 */
+.bot-message.markdown-body blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+    margin: 1em 0;
+}
+
+/* 목록 스타일 조정 */
+.bot-message.markdown-body ul,
+.bot-message.markdown-body ol {
+    padding-left: 2em;
+    margin: 16px 0;
+}
+
+/* 이미지 크기 제한 */
+.bot-message.markdown-body img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* style.css에 복사 버튼 스타일 추가 */
+.copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.copy-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.copy-button.copied {
+    background-color: #28a745;
+    color: white;
+}
+
+/* 전체 메시지 복사 버튼 스타일 */
+.message-copy-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #666;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+    opacity: 0.7;
+}
+
+.message-copy-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+.message-copy-button.copied {
+    background-color: #28a745;
+    color: white;
+    opacity: 1;
+}
+
+/* style.css에 접근성 관련 스타일 추가 */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* 키보드 포커스 스타일 개선 */
+input[type="text"]:focus,
+input[type="submit"]:focus,
+button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* 다크 모드일 때 포커스 스타일 */
+body[data-theme="dark"] input[type="text"]:focus,
+body[data-theme="dark"] input[type="submit"]:focus,
+body[data-theme="dark"] button:focus {
+    outline-color: #66b0ff;
+}
+/* style.css에 추가 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .chat-container {
+        height: 90vh;
+        max-width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .user-message, .bot-message {
+        max-width: 90%;
+        padding: 10px !important;
+        font-size: 14px;
+    }
+    
+    .input-container {
+        padding: 10px 0;
+    }
+    
+    input[type="text"] {
+        padding: 8px;
+    }
+    
+    input[type="submit"] {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .bot-message.markdown-body pre {
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 12px;
+    }
+}
+
+/* 애니메이션 부드럽게 개선 */
+.message {
+    animation: fadeIn 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* 기존 CSS 유지, 아래 스타일 추가 */
+
+/* bash 코드 블록 텍스트 색상 수정 */
+.bot-message.markdown-body code[class*="language-bash"],
+.bot-message.markdown-body pre[class*="language-bash"] {
+    color: #f8f8f2 !important; /* 밝은 색상으로 변경 */
+}
+
+/* bash 코드 토큰들의 색상도 조정 */
+.token.function {
+    color: #66d9ef !important;
+}
+
+.token.operator {
+    color: #f92672 !important;
+}
+
+.token.string {
+    color: #a6e22e !important;
+}
+
+.token.comment {
+    color: #75715e !important;
+}
+
+.token.punctuation {
+    color: #f8f8f2 !important;
+}
+
+.token.keyword {
+    color: #f92672 !important;
+}
+
+.token.number {
+    color: #ae81ff !important;
+}
+
+/* bash 코드 블록 내 모든 텍스트가 보이도록 강제 설정 */
+.language-bash {
+    color: #f8f8f2 !important;
+}
+
+.language-bash * {
+    color: inherit !important;
+}
+
+/* 기본 코드 블록의 텍스트 색상도 확인 */
+.bot-message.markdown-body pre code {
+    color: #f8f8f2 !important;
+}
+
+/* 키워드 강조를 강화 */
+.bot-message.markdown-body .language-bash .token.builtin {
+    color: #66d9ef !important;
+}
+
+.bot-message.markdown-body .language-bash .token.parameter {
+    color: #fd971f !important;
+}
+
+/* Prism.js 가 제대로 적용되지 않을 경우를 대비한 백업 스타일 */
+.bot-message.markdown-body pre {
+    background-color: #2d2d2d !important;
+    color: #f8f8f2 !important;
+}
+
+/* 코드 블록 스타일 명시적 수정 */
+.bot-message.markdown-body pre {
+    position: relative !important;
+    padding-top: 35px !important; /* 복사 버튼을 위한 공간 확보 */
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+/* 코드 블록 스타일 */
+
+/* 코드 블록 스타일 명시적 수정 */
+.bot-message.markdown-body pre {
+    position: relative !important;
+    padding-top: 35px !important; /* 복사 버튼을 위한 공간 확보 */
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+/* 메시지 컨테이너 조정 - 전체 복사 버튼 공간 확보 */
+.bot-message.markdown-body {
+    position: relative;
+    padding-top: 30px !important; /* 복사 버튼 공간 확보 */
+}
+/* Mermaid 다이어그램 스타일 */
+.mermaid {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* 다크 모드에서의 Mermaid 다이어그램 */
+@media (prefers-color-scheme: dark) {
+    .mermaid {
+        background-color: #1e1e1e;
+    }
+}
+/* 코드 액션 버튼 스타일 */
+.code-actions {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.copy-button, .mermaid-button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover, .mermaid-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mermaid-button {
+  background-color: rgba(0, 118, 189, 0.6); /* Mermaid 버튼 색상 차별화 */
+}
+
+.mermaid-button:hover {
+  background-color: rgba(0, 118, 189, 0.8);
+}
+
+pre {
+  position: relative;
+  padding-top: 30px; /* 버튼을 위한 추가 패딩 */
+}
+.code-block-wrapper {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.code-language-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 10px;
+    font-size: 12px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-bottom-left-radius: 5px;
+    z-index: 1;
+}
+
+.code-block-wrapper pre {
+    margin-top: 0;
+}

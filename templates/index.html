@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 챗봇</title>
+    <link href="/static/style.css" rel="stylesheet">
+    <!-- GitHub 마크다운 스타일 추가 -->
+    <link rel="stylesheet" href="/static/css/github-markdown.min.css">
+    <!-- Prism.js 스타일 및 스크립트 추가 (테마 선택: okaidia) -->
+    <link rel="stylesheet" href="/static/css/prism-okaidia.min.css">
+    <!-- Marked.js 라이브러리 추가 -->
+    <script src="/static/js/marked.min.js"></script>
+    <script src="/static/js/prism.min.js"></script>
+    <!-- Prism.js 추가 언어 지원 -->
+    <script src="/static/js/prism-python.min.js"></script>
+    <script src="/static/js/prism-javascript.min.js"></script>
+    <script src="/static/js/prism-java.min.js"></script>
+    <script src="/static/js/prism-bash.min.js"></script>
+    <script src="/static/js/prism-sql.min.js"></script>
+    <!-- Font Awesome 아이콘 추가 -->
+    <link rel="stylesheet" href="/static/css/all.min.css">
+</head>
+<body>
+{#    <h1 style="text-align: center;">AI 챗봇</h1>#}
+
+    <main role="main">
+        <div class="chat-container">
+            <div class="messages-container" id="chat-messages" role="log" aria-live="polite" aria-label="대화 내용">
+                <!-- 대화 내용이 여기에 표시됩니다 -->
+            </div>
+            <div class="input-container">
+                <form id="chat-form" onsubmit="return sendMessage();" aria-label="메시지 입력 폼">
+                    <label for="prompt" class="sr-only">메시지 입력</label>
+                    <input type="text" id="prompt" placeholder="무엇이든 물어보세요" required autofocus aria-label="메시지 입력">
+                    <input type="submit" value="질문하기" aria-label="메시지 전송">
+                    <input type="hidden" id="session_id" value="{{ session_id }}">
+                    <input type="hidden" id="initial_query" value="{{ query or '' }}">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mermaid 최신 버전 사용 -->
+<script src="/static/js/mermaid.min.js"></script>
+    <script src="/static/chat.js"></script>
+</body>
+</html>

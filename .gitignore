@@ -1,0 +1,6 @@
+venv
+.idea
+catetory_index.py
+question_categories.pkl
+question_categories.index
+chatlog.db
