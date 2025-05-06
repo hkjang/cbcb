@@ -3,4 +3,6 @@ venv
 catetory_index.py
 question_categories.pkl
 question_categories.index
+intent_categories.pkl
+intent_categories.index
 chatlog.db

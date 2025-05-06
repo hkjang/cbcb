@@ -15,7 +15,7 @@ import faiss
 import numpy as np
 import pickle
 
-# 카테고리 인덱스 로드
+# 의도 인덱스 로드 부분 추가
 with open("question_categories.pkl", "rb") as f:
     data = pickle.load(f)
     category_labels = data["labels"]
@@ -23,10 +23,24 @@ with open("question_categories.pkl", "rb") as f:
 category_index = faiss.read_index("question_categories.index")
 category_model = SentenceTransformer("intfloat/multilingual-e5-large-instruct")
 
+# 의도 인덱스 로드
+with open("intent_categories.pkl", "rb") as f:
+    intent_data = pickle.load(f)
+    intent_labels = intent_data["labels"]
+
+intent_index = faiss.read_index("intent_categories.index")
+intent_model = SentenceTransformer("intfloat/multilingual-e5-large-instruct")
+
 def predict_category(question: str) -> str:
     embedding = category_model.encode([question])
     D, I = category_index.search(np.array(embedding), k=1)
     return category_labels[I[0][0]]
+
+# 의도 분류 함수 추가
+def predict_intent(question: str) -> str:
+    embedding = intent_model.encode([question])
+    D, I = intent_index.search(np.array(embedding), k=1)
+    return intent_labels[I[0][0]]
 app = FastAPI()
 # 정적 파일 및 템플릿 설정
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -63,6 +77,11 @@ async def classify_question(question: str = Body(..., embed=True)):
     category = predict_category(question)
     return {"category": category}
 
+@app.post("/classify-intent")
+async def classify_intent(question: str = Body(..., embed=True)):
+    intent = predict_intent(question)
+    return {"intent": intent}
+
 @app.post("/chat")
 async def chat(prompt: str = Form(...), session_id: str = Form(...)):
     # 세션을 통한 대화 상태 유지
@@ -71,13 +90,15 @@ async def chat(prompt: str = Form(...), session_id: str = Form(...)):
 
     # 질문 분류
     category = predict_category(prompt)
-    print(f"[질문 분류] 입력: {prompt} → 카테고리: {category}")
+    # 의도 분류 추가
+    intent = predict_intent(prompt)
+    print(f"[질문 분류] 입력: {prompt} → 카테고리: {category}, 의도: {intent}")
 
-    # 시스템 메시지로 카테고리 추가
+    # 시스템 메시지로 카테고리와 의도 추가
     if not any(msg["role"] == "system" for msg in active_sessions[session_id]):
         active_sessions[session_id].append({
             "role": "system",
-            "content": f"사용자의 질문은 '{category}' 카테고리에 해당합니다. 해당 주제에 적절한 방식으로 답변하세요."
+            "content": f"사용자의 질문은 '{category}' 카테고리에 해당하며, '{intent}' 의도를 가집니다. 해당 주제와 의도에 적절한 방식으로 답변하세요."
         })
 
     # 사용자 메시지 추가
@@ -86,12 +107,9 @@ async def chat(prompt: str = Form(...), session_id: str = Form(...)):
         "content": prompt
     })
 
-    # 대화 메시지 추가
-    # active_sessions[session_id].append({"role": "user", "content": prompt})
-    # return JSONResponse(content={"status": "success", "message": "메시지가 처리되었습니다"})
     return JSONResponse(content={
         "status": "success",
-        "message": f"메시지가 '{category}' 카테고리로 분류되어 처리되었습니다."
+        "message": f"메시지가 '{category}' 카테고리, '{intent}' 의도로 분류되어 처리되었습니다."
     })
 
 @app.get("/chat-stream")
