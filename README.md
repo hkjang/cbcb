@@ -35,8 +35,8 @@
 
 ```shell script
 # 저장소 클론
-git clone https://github.com/hkjang/ai-chatbot.git
-cd ai-chatbot
+git clone https://github.com/hkjang/cbcb.git
+cd cbcb
 
 # 가상환경 생성 및 활성화
 python -m venv venv
@@ -80,7 +80,7 @@ python main.py
 ## 📁 디렉터리 구조
 
 ```
-ai-chatbot/
+cbcb/
 ├── main.py              # FastAPI 서버 코드
 ├── templates/           # HTML 템플릿
 │   └── index.html       # 웹 UI 메인 페이지
