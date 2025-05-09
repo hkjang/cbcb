@@ -7,7 +7,7 @@
 | 기술 스택 | FastAPI, HTML/CSS/JS, Ollama API, Server-Sent Events |
 
 ---
-
+![챗봇 시연](/static/cbcb_play.gif)
 ## 📌 소개
 
 이 프로젝트는 Ollama API를 활용한 대화형 AI 챗봇입니다. 사용자와 자연스러운 대화를 나누며 마크다운 형식으로 응답을 표시합니다. Server-Sent Events(SSE)를 통해 실시간 스트리밍 응답을 제공하며, 타이핑 효과로 더욱 자연스러운 대화 경험을 제공합니다.
@@ -35,8 +35,8 @@
 
 ```shell script
 # 저장소 클론
-git clone https://github.com/hkjang/ai-chatbot.git
-cd ai-chatbot
+git clone https://github.com/hkjang/cbcb.git
+cd cbcb
 
 # 가상환경 생성 및 활성화
 python -m venv venv
@@ -80,7 +80,7 @@ python main.py
 ## 📁 디렉터리 구조
 
 ```
-ai-chatbot/
+cbcb/
 ├── main.py              # FastAPI 서버 코드
 ├── templates/           # HTML 템플릿
 │   └── index.html       # 웹 UI 메인 페이지
