@@ -240,15 +240,21 @@ OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://127.0.0.1:11434")
 OLLAMA_MODEL_NAME = os.getenv("OLLAMA_MODEL_NAME", "gemma3:1b")
 
 
-@app.get("/", response_class=HTMLResponse)
-async def index(request: Request, session_id: str = None, q: str = None):
-    if not session_id:
-        session_id = str(uuid.uuid4())
+@app.api_route("/", methods=["GET", "POST"], response_class=HTMLResponse)
+async def index(request: Request, session_id: str = None, q: str = Form(None)):
+    if request.method == "POST":
+        form = await request.form()
+        session_id = form.get("session_id") or str(uuid.uuid4())
+        q = form.get("q")
+    else:
+        if not session_id:
+            session_id = str(uuid.uuid4())
+
     return templates.TemplateResponse(
         "index.html",
         {"request": request, "session_id": session_id, "query": q}
     )
-
+    
 # 서버 상태 확인 엔드포인트
 @app.get("/api/status")
 async def check_model_status():
