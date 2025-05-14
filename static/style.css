@@ -263,6 +263,16 @@ body {
     flex-direction: column;
 }
 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding-right: 20px; /* 오른쪽 마진 추가 */
+    margin-right: 10px; /* 추가 마진 설정 */
+}
+
 input[type="text"] {
     width: 100%;
     padding: 10px;

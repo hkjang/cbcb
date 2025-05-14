@@ -32,7 +32,7 @@
             <div class="input-container">
                 <form id="chat-form" onsubmit="return sendMessage();" aria-label="메시지 입력 폼">
                     <label for="prompt" class="sr-only">메시지 입력</label>
-                    <input type="text" id="prompt" placeholder="무엇이든 물어보세요" required autofocus aria-label="메시지 입력">
+                    <textarea id="prompt" placeholder="무엇이든 물어보세요" required autofocus aria-label="메시지 입력"></textarea>
                     <input type="submit" value="질문하기" aria-label="메시지 전송">
                     <input type="hidden" id="session_id" value="{{ session_id }}">
                     <input type="hidden" id="initial_query" value="{{ query or '' }}">

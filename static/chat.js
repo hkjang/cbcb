@@ -363,6 +363,20 @@ function detectAndHandleMermaid() {
     }
 }
 
+function submitOnEnter(event) {
+    if (event.key === 'Enter') {
+        if (!event.shiftKey) {
+            if (!event.repeat) {
+                event.preventDefault();
+                const newEvent = new Event("submit", {cancelable: true});
+                event.target.form.dispatchEvent(newEvent);
+            }
+        }
+    }
+}
+
+document.getElementById("prompt").addEventListener("keydown", submitOnEnter);
+
 // Marked.js 설정 커스터마이징
 document.addEventListener('DOMContentLoaded', function() {
     // Marked 설정 - 줄바꿈 처리 및 Prism.js를 사용한 구문 강조 적용
