@@ -1,37 +1,46 @@
 import pickle
 import faiss
+import numpy as np
+import argparse
 from sentence_transformers import SentenceTransformer
 from intent_samples import intent_samples
-import numpy as np
 
-# SentenceTransformer 모델 로드
-model = SentenceTransformer("intfloat/multilingual-e5-large-instruct")
+def main(device_choice):
+    model_name = "intfloat/multilingual-e5-large-instruct"
+    model = SentenceTransformer(model_name, device=device_choice)
 
-sentences = []
-labels = []
+    sentences = []
+    labels = []
 
-# intent_samples에서 문장과 라벨 추출
-for intent, samples in intent_samples.items():
-    for s in samples:
-        sentences.append(s)
-        labels.append(intent)
+    for intent, samples in intent_samples.items():
+        for s in samples:
+            sentences.append(s)
+            labels.append(intent)
 
-# 문장을 임베딩으로 변환
-embeddings = model.encode(sentences)
+    embeddings = model.encode(sentences)
 
-# FAISS 인덱스 생성 및 임베딩 추가
-index = faiss.IndexFlatL2(embeddings.shape[1])
-index.add(embeddings)
+    if device_choice == "cuda":
+        res = faiss.StandardGpuResources()
+        index_flat = faiss.IndexFlatL2(embeddings.shape[1])
+        index = faiss.index_cpu_to_gpu(res, 0, index_flat)
+    else:
+        index = faiss.IndexFlatL2(embeddings.shape[1])
 
-# 데이터 저장을 위한 딕셔너리 생성
-data = {
-    "embeddings": embeddings,
-    "labels": labels
-}
+    index.add(embeddings)
 
-# 피클 파일로 저장
-with open("intent_categories.pkl", "wb") as f:
-    pickle.dump(data, f)
+    data = {
+        "embeddings": embeddings,
+        "labels": labels
+    }
 
-# FAISS 인덱스 파일로 저장
-faiss.write_index(index, "intent_categories.index")
+    with open("intent_categories.pkl", "wb") as f:
+        pickle.dump(data, f)
+
+    faiss.write_index(faiss.index_gpu_to_cpu(index) if device_choice == "cuda" else index,
+                      "intent_categories.index")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--device", type=str, choices=["cpu", "cuda"], default="cpu", help="사용할 디바이스 선택")
+    args = parser.parse_args()
+    main(args.device)
