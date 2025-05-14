@@ -28,6 +28,18 @@ category_samples = {
         "서버리스 아키텍처란 무엇인가요?"
     ],
     "모바일_앱_개발": [
+        "안드로이드 앱 개발은 어떻게 시작하나요?",
+        "iOS 앱 개발을 위한 Swift 기초를 알려주세요",
+        "React Native와 Flutter의 차이점은 무엇인가요?",
+        "크로스 플랫폼 앱 개발이란 무엇인가요?",
+        "모바일 앱 UI/UX 디자인 팁을 알려주세요",
+        "앱 스토어에 앱을 출시하는 방법은?",
+        "모바일 앱 성능 최적화 방법을 알려주세요",
+        "PWA(Progressive Web App)란 무엇인가요?",
+        "모바일 앱 테스트 방법을 알려주세요",
+        "안드로이드의 액티비티 생명주기란 무엇인가요?",
+        "iOS의 뷰 컨트롤러란 무엇인가요?",
+        "모바일 앱에서 푸시 알림은 어떻게 구현하나요?",
         "앱 개발을 어떻게 시작하나요?",
         "iOS와 안드로이드 개발 중 어떤 것을 배워야 할까요?",
         "React Native와 Flutter 중 어떤 것이 좋은가요?",
@@ -36,11 +48,77 @@ category_samples = {
         "앱 스토어 등록 과정을 설명해주세요",
         "앱 수익화 전략에는 어떤 것들이 있나요?"
     ],
+    "Java": [
+        "Java의 특징은 무엇인가요?",
+        "Java와 JavaScript의 차이점은 무엇인가요?",
+        "Java의 JVM이란 무엇인가요?",
+        "Java에서 추상 클래스와 인터페이스의 차이점은?",
+        "Java 스프링 프레임워크란 무엇인가요?",
+        "Java의 가비지 컬렉션은 어떻게 작동하나요?",
+        "Java에서 예외 처리 방법을 알려주세요",
+        "Java의 스레드 사용법을 알려주세요",
+        "Java에서 컬렉션 프레임워크란 무엇인가요?",
+        "Java 람다식이란 무엇인가요?",
+        "Java 스트림 API 사용법을 알려주세요",
+        "Java의 오버로딩과 오버라이딩 차이는 무엇인가요?"
+    ],
+    "Python": [
+        "Python 기초 문법을 알려주세요",
+        "Python과 다른 언어의 차이점은 무엇인가요?",
+        "Python의 리스트와 튜플의 차이점은?",
+        "Python에서 가상환경을 어떻게 설정하나요?",
+        "Python의 모듈과 패키지란 무엇인가요?",
+        "Python으로 웹 스크래핑하는 방법을 알려주세요",
+        "Python의 데코레이터란 무엇인가요?",
+        "Python에서 예외 처리는 어떻게 하나요?",
+        "Python으로 데이터 분석하는 방법을 알려주세요",
+        "Django와 Flask의 차이점은 무엇인가요?",
+        "Python에서 메모리 관리는 어떻게 되나요?",
+        "Pandas 라이브러리 사용법을 알려주세요"
+    ],
+    "Node.js": [
+        "Node.js란 무엇인가요?",
+        "Node.js의 장단점을 알려주세요",
+        "Node.js에서 비동기 프로그래밍은 어떻게 하나요?",
+        "Express 프레임워크 사용법을 알려주세요",
+        "Node.js에서 NPM이란 무엇인가요?",
+        "Node.js에서 콜백 함수란 무엇인가요?",
+        "Node.js에서 Promise와 async/await 사용법은?",
+        "Node.js에서 이벤트 루프란 무엇인가요?",
+        "Node.js로 REST API를 어떻게 만드나요?",
+        "Node.js에서 MongoDB 연결 방법을 알려주세요",
+        "Node.js와 Deno의 차이점은 무엇인가요?",
+        "Node.js에서 메모리 누수를 어떻게 방지하나요?"
+    ],
+    "Bash_쉘_스크립트": [
+        "Bash 쉘이란 무엇인가요?",
+        "기본적인 Linux 명령어를 알려주세요",
+        "Bash 스크립트를 어떻게 작성하나요?",
+        "쉘 스크립트에서 변수 사용법을 알려주세요",
+        "Bash에서 조건문을 어떻게 사용하나요?",
+        "Bash에서 반복문 사용법을 알려주세요",
+        "sed와 awk 명령어 사용법을 알려주세요",
+        "Bash에서 정규표현식 사용법은?",
+        "Bash 스크립트로 파일 처리하는 방법을 알려주세요",
+        "Bash에서 파이프라인이란 무엇인가요?",
+        "Cron 작업 설정 방법을 알려주세요",
+        "Bash 쉘 스크립트 디버깅 방법은?"
+    ],
     "데이터베이스": [
         "SQL과 NoSQL의 차이점은 무엇인가요?",
         "관계형 데이터베이스란 무엇인가요?",
         "MongoDB와 MySQL 중 어떤 것을 사용해야 할까요?",
         "데이터베이스 인덱싱이란 무엇인가요?",
+        "데이터베이스 정규화란 무엇인가요?",
+        "MySQL과 PostgreSQL의 차이점은?",
+        "데이터베이스 인덱스란 무엇인가요?",
+        "트랜잭션이란 무엇인가요?",
+        "SQL 기본 쿼리문을 알려주세요",
+        "데이터베이스 설계 방법을 알려주세요",
+        "ORM이란 무엇인가요?",
+        "Redis와 같은 인메모리 데이터베이스란 무엇인가요?",
+        "MongoDB 사용법을 알려주세요",
+        "데이터베이스 성능 최적화 방법은?",
         "트랜잭션이란 무엇인가요?",
         "데이터 정규화란 무엇인가요?",
         "데이터베이스 성능 최적화 방법을 알려주세요",
@@ -120,10 +198,20 @@ category_samples = {
         "인증과 인가의 차이점은 무엇인가요?"
     ],
     "DevOps": [
+        "DevOps란 무엇인가요?",
         "CI/CD 파이프라인이란 무엇인가요?",
+        "Docker 사용법을 알려주세요",
+        "Kubernetes란 무엇인가요?",
+        "Git 버전 관리 시스템 사용법을 알려주세요",
+        "클라우드 컴퓨팅이란 무엇인가요?",
+        "AWS와 Azure의 차이점은 무엇인가요?",
+        "Infrastructure as Code란 무엇인가요?",
+        "모니터링 도구 추천해주세요",
+        "로그 관리 방법을 알려주세요",
+        "마이크로서비스 아키텍처란 무엇인가요?",
+        "컨테이너 오케스트레이션이란 무엇인가요?",
         "인프라스트럭처 자동화 방법을 알려주세요",
         "GitOps란 무엇인가요?",
-        "마이크로서비스 아키텍처란 무엇인가요?",
         "모니터링과 로깅 시스템 구축 방법을 알려주세요",
         "Terraform이란 무엇인가요?",
         "DevOps와 SRE의 차이점은 무엇인가요?",
@@ -4441,6 +4529,174 @@ category_samples = {
         "AWS 계정 간 액세스 관리 전략을 알려주세요",
         "AWS License Manager를 이용한 라이선스 관리 방법이 궁금합니다",
         "AWS Service Catalog를 이용한 셀프 서비스 인프라 구성 방법을 알려주세요"
-    ]
+    ],
 
+    "SQL_기초": [
+        "SQL이란 무엇인가요?",
+        "SQL 문법의 기본 구조는 어떻게 되나요?",
+        "SELECT 문의 기본 사용법을 알려주세요",
+        "데이터베이스와 테이블의 차이점은 무엇인가요?",
+        "SQL에서 WHERE 절은 어떻게 사용하나요?",
+        "GROUP BY와 ORDER BY의 차이점은 무엇인가요?",
+        "데이터베이스 정규화란 무엇인가요?",
+        "기본 키와 외래 키의 개념을 설명해주세요",
+        "SQL의 데이터 타입에는 어떤 것들이 있나요?",
+        "SQL 주석은 어떻게 작성하나요?"
+    ],
+
+    "ANSI_SQL_표준": [
+        "ANSI SQL 표준이란 무엇인가요?",
+        "ANSI SQL과 다른 SQL 방언의 차이점은 무엇인가요?",
+        "ANSI SQL 표준 JOIN 구문을 알려주세요",
+        "ANSI SQL 표준 윈도우 함수란 무엇인가요?",
+        "ANSI SQL 표준 CASE 문 사용법을 알려주세요",
+        "ANSI SQL에서 서브쿼리는 어떻게 작성하나요?",
+        "ANSI SQL 표준 트랜잭션 처리는 어떻게 하나요?",
+        "ANSI SQL 표준 뷰(VIEW)의 특징은 무엇인가요?",
+        "ANSI SQL CTE(공통 테이블 표현식)란 무엇인가요?",
+        "ANSI SQL의 최신 버전은 무엇인가요?"
+    ],
+
+    # 새로 추가하는 CRUD 관련 분류
+    "SQL_SELECT_쿼리": [
+        "기본 SELECT 문 작성법을 알려주세요",
+        "SELECT 쿼리에서 다중 조건은 어떻게 사용하나요?",
+        "SELECT와 JOIN을 함께 사용하는 방법은 무엇인가요?",
+        "SELECT 쿼리 결과를 필터링하는 방법은 무엇인가요?",
+        "SELECT 쿼리에서 집계 함수(SUM, AVG 등)는 어떻게 사용하나요?",
+        "SELECT 결과를 그룹화하는 방법을 알려주세요",
+        "SELECT 쿼리에서 HAVING과 WHERE의 차이점은 무엇인가요?",
+        "중첩 SELECT 쿼리(서브쿼리)는 어떻게 작성하나요?",
+        "SELECT에서 DISTINCT 사용법을 알려주세요",
+        "SELECT 쿼리 최적화 방법은 무엇인가요?"
+    ],
+
+    "SQL_INSERT_쿼리": [
+        "기본 INSERT 문 작성법을 알려주세요",
+        "여러 행을 한 번에 INSERT하는 방법은 무엇인가요?",
+        "SELECT 결과를 INSERT하는 방법을 알려주세요",
+        "INSERT IGNORE 구문은 어떻게 사용하나요?",
+        "INSERT ... ON DUPLICATE KEY UPDATE 사용법은 무엇인가요?",
+        "대량 데이터 INSERT 성능 최적화 방법은 무엇인가요?",
+        "자동 증가 키가 있는 테이블에 INSERT하는 방법은 무엇인가요?",
+        "INSERT 문에서 DEFAULT 값 처리는 어떻게 하나요?",
+        "트랜잭션 내에서 INSERT 사용 방법을 알려주세요"
+    ],
+
+    "SQL_UPDATE_쿼리": [
+        "기본 UPDATE 문 작성법을 알려주세요",
+        "조건부 UPDATE 쿼리는 어떻게 작성하나요?",
+        "여러 테이블 JOIN을 사용한 UPDATE 방법은 무엇인가요?",
+        "서브쿼리를 사용한 UPDATE 방법을 알려주세요",
+        "대량 데이터 UPDATE 성능 최적화 방법은 무엇인가요?",
+        "CASE 문을 사용한 조건부 UPDATE 방법은 무엇인가요?",
+        "UPDATE와 트랜잭션 격리 수준의 관계는 무엇인가요?",
+        "UPDATE 쿼리의 안전한 실행 방법은 무엇인가요?",
+        "UPDATE 쿼리 실행 전 검증 방법을 알려주세요",
+        "UPDATE 작업 로깅 방법은 무엇인가요?"
+    ],
+
+    "SQL_DELETE_쿼리": [
+        "기본 DELETE 문 작성법을 알려주세요",
+        "조건부 DELETE 쿼리는 어떻게 작성하나요?",
+        "JOIN을 사용한 DELETE 방법은 무엇인가요?",
+        "서브쿼리를 사용한 DELETE 방법을 알려주세요",
+        "대량 데이터 DELETE 성능 최적화 방법은 무엇인가요?",
+        "TRUNCATE와 DELETE의 차이점은 무엇인가요?",
+        "CASCADE DELETE란 무엇인가요?",
+        "DELETE와 트랜잭션의 관계는 무엇인가요?",
+        "데이터 삭제 전략(소프트 딜리트 vs 하드 딜리트)은 무엇인가요?",
+        "DELETE 작업의 안전한 실행 방법은 무엇인가요?"
+    ],
+
+    "SQL_DDL_명령어": [
+        "CREATE TABLE 구문 작성법을 알려주세요",
+        "ALTER TABLE을 이용한 테이블 구조 변경 방법은 무엇인가요?",
+        "DROP TABLE과 TRUNCATE TABLE의 차이점은 무엇인가요?",
+        "CREATE INDEX 구문과 인덱스 종류를 설명해주세요",
+        "CREATE VIEW 작성법과 뷰의 장점은 무엇인가요?",
+        "스키마 생성 및 관리 방법을 알려주세요",
+        "제약 조건(CONSTRAINTS) 설정 방법은 무엇인가요?",
+        "시퀀스(SEQUENCE) 생성 및 관리 방법은 무엇인가요?",
+        "DDL 문의 트랜잭션 처리 특성은 무엇인가요?",
+        "데이터베이스 스키마 버전 관리 전략을 알려주세요"
+    ],
+
+    "SQL_DCL_및_TCL": [
+        "GRANT와 REVOKE 명령어 사용법을 알려주세요",
+        "데이터베이스 사용자 권한 관리 방법은 무엇인가요?",
+        "COMMIT과 ROLLBACK 명령어는 어떻게 사용하나요?",
+        "SAVEPOINT 사용법과 장점은 무엇인가요?",
+        "트랜잭션 시작과 종료 방법을 알려주세요",
+        "자동 커밋(AUTO COMMIT) 설정 방법은 무엇인가요?",
+        "트랜잭션 격리 수준 설정 방법을 알려주세요",
+        "데이터베이스 역할(ROLE) 생성 및 관리 방법은 무엇인가요?",
+        "트랜잭션 데드락(DEADLOCK) 방지 전략은 무엇인가요?",
+        "분산 트랜잭션 처리 방법을 알려주세요"
+    ],
+
+    "SQL_쿼리_분석": [
+        "SELECT * FROM customers WHERE last_purchase_date > '2023-01-01' ORDER BY total_spending DESC; 이 쿼리의 문제점은 무엇인가요?",
+        "SELECT c.customer_id, c.name, COUNT(o.order_id) as order_count FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id, c.name; 이 쿼리를 최적화해주세요",
+        "SELECT * FROM products WHERE category = 'electronics' AND price BETWEEN 100 AND 500; 이 쿼리에 인덱스를 추가하려면 어떻게 해야 하나요?",
+        "INSERT INTO users (username, email, created_at) VALUES ('user1', 'user1@example.com', NOW()); 이 쿼리의 보안 문제는 무엇인가요?",
+        "UPDATE accounts SET balance = balance - 100 WHERE account_id = 12345; 이 쿼리의 트랜잭션 처리는 어떻게 해야 하나요?",
+        "CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), department_id INT REFERENCES departments(id)); 이 DDL 문의 문제점은 무엇인가요?",
+        "SELECT department, AVG(salary) FROM employees GROUP BY department HAVING COUNT(*) > 5; 이 쿼리의 결과를 설명해주세요",
+        "DELETE FROM orders WHERE order_date < '2020-01-01'; 이 쿼리의 실행 위험성은 무엇인가요?",
+        "WITH recursive_cte AS (SELECT id, parent_id, name FROM categories WHERE parent_id IS NULL UNION ALL SELECT c.id, c.parent_id, c.name FROM categories c JOIN recursive_cte rc ON c.parent_id = rc.id) SELECT * FROM recursive_cte; 이 재귀 쿼리가 어떻게 작동하는지 설명해주세요",
+        "SELECT p.product_id, p.name, SUM(o.quantity) as total_sold FROM products p LEFT JOIN order_items o ON p.product_id = o.product_id GROUP BY p.product_id, p.name ORDER BY total_sold DESC LIMIT 10; 이 쿼리의 성능 개선 방법은 무엇인가요?"
+    ],
+
+    "SQL_쿼리_디버깅": [
+        "SELECT customer_id, SUM(total) as total_amount FROM orders WHERE YEAR(order_date) = 2023 GROUP BY customer_id HAVING total_amount > 1000; 이 쿼리에서 오류가 발생합니다. 원인이 무엇인가요?",
+        "INSERT INTO transactions (account_id, amount, type) VALUES (12345, -500, 'withdrawal') WHERE balance >= 500; 이 쿼리가 실행되지 않는 이유는 무엇인가요?",
+        "SELECT * FROM customers c JOIN orders o USING (customer_id) WHERE o.status = 'completed'; 이 쿼리의 구문 오류를 수정해주세요",
+        "UPDATE products SET price = price * 1.1 WHERE category IN ('electronics', 'appliances') AND price * 1.1 <= 1000; 이 쿼리의 논리적 오류는 무엇인가요?",
+        "SELECT AVG(amount) as avg_amount, MAX(amount) as max_amount, customer_id FROM transactions GROUP BY transaction_date; 이 쿼리의 GROUP BY 문제를 해결해주세요",
+        "SELECT name, department FROM employees WHERE department = IT AND hire_date > '2022-01-01'; 이 쿼리의 오류를 찾아주세요",
+        "DELETE customers WHERE last_activity_date < '2020-01-01'; 이 쿼리의 문법 오류를 수정해주세요",
+        "SELECT p.product_name, c.category_name FROM products p, categories c WHERE p.category_id = c.id AND p.price > 100; 이 쿼리를 ANSI SQL 표준에 맞게 수정해주세요",
+        "WITH monthly_sales AS (SELECT MONTH(order_date) as month, SUM(total) as total_sales FROM orders WHERE YEAR(order_date) = 2023) SELECT month, total_sales, total_sales - LAG(total_sales) OVER(ORDER BY month) as difference FROM monthly_sales; 이 쿼리의 오류를 수정해주세요",
+        "SELECT COUNT(DISTINCT customer_id) FROM orders WHERE MONTH(order_date) = MONTH(CURRENT_DATE()) AND YEAR(order_date) = YEAR(CURRENT_DATE()); 이 쿼리의 데이터베이스 호환성 문제를 해결해주세요"
+    ],
+
+    "SQL_쿼리_최적화_요청": [
+        "SELECT * FROM customers WHERE YEAR(registration_date) = 2023; 이 쿼리를 인덱스를 활용하도록 최적화해주세요",
+        "SELECT o.order_id, o.order_date, c.customer_name, SUM(oi.price * oi.quantity) as total FROM orders o JOIN customers c ON o.customer_id = c.customer_id JOIN order_items oi ON o.order_id = oi.order_id GROUP BY o.order_id, o.order_date, c.customer_name; 이 쿼리의 성능을 개선해주세요",
+        "SELECT * FROM products WHERE price > (SELECT AVG(price) FROM products); 이 서브쿼리를 최적화해주세요",
+        "SELECT DISTINCT c.customer_id, c.name FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE o.order_date >= '2023-01-01'; 이 쿼리의 DISTINCT 사용을 개선해주세요",
+        "SELECT product_id, name, price FROM products WHERE category = 'electronics' ORDER BY price DESC LIMIT 100000, 10; 이 쿼리의 페이지네이션을 최적화해주세요",
+        "SELECT * FROM logs WHERE created_at BETWEEN '2023-01-01' AND '2023-01-31' AND action = 'login' AND user_id IN (SELECT user_id FROM users WHERE role = 'admin'); 이 쿼리를 더 효율적으로 작성해주세요",
+        "UPDATE large_table SET status = 'inactive' WHERE last_activity_date < '2022-01-01'; 이 대량 업데이트 쿼리를 최적화해주세요",
+        "SELECT COUNT(*) FROM orders WHERE YEAR(order_date) = 2023 AND status = 'completed'; 이 카운트 쿼리를 빠르게 실행하는 방법을 알려주세요",
+        "DELETE FROM audit_logs WHERE created_at < '2022-01-01'; 이 대량 삭제 쿼리를 효율적으로 실행하는 방법을 알려주세요",
+        "SELECT c.customer_id, c.name, SUM(o.total) as total_spending FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id, c.name HAVING total_spending > 1000 OR total_spending IS NULL; 이 쿼리의 LEFT JOIN 성능을 개선해주세요"
+    ],
+
+    "신용정보_SQL_쿼리": [
+        "SELECT client_id, credit_score FROM credit_profiles WHERE credit_score < 650 AND last_update > '2023-01-01'; 이 신용점수 필터링 쿼리를 개선해주세요",
+        "SELECT c.customer_id, c.name, p.credit_score, p.risk_level FROM customers c JOIN credit_profiles p ON c.customer_id = p.customer_id WHERE p.delinquent_payments > 2 AND p.last_update > DATEADD(month, -3, GETDATE()); 이 연체 고객 조회 쿼리를 최적화해주세요",
+        "INSERT INTO credit_events (customer_id, event_type, event_date, score_impact) VALUES (12345, 'late_payment', GETDATE(), -15); 이 신용 이벤트 기록 쿼리의 문제점은 무엇인가요?",
+        "UPDATE credit_profiles SET credit_score = credit_score - 20 WHERE customer_id IN (SELECT customer_id FROM loans WHERE days_past_due > 30); 이 신용점수 조정 쿼리를 개선해주세요",
+        "SELECT customer_id, AVG(credit_score) as avg_score, MAX(credit_score) as max_score, MIN(credit_score) as min_score FROM credit_history WHERE update_date >= DATEADD(year, -2, GETDATE()) GROUP BY customer_id; 이 신용 히스토리 분석 쿼리를 최적화해주세요",
+        "SELECT c.customer_id, c.name, l.loan_amount, l.interest_rate, l.approval_date FROM customers c JOIN loan_applications l ON c.customer_id = l.customer_id WHERE l.status = 'approved' AND l.approval_date >= '2023-01-01' ORDER BY l.approval_date DESC; 이 대출 승인 조회 쿼리를 개선해주세요",
+        "WITH risk_segments AS (SELECT customer_id, CASE WHEN credit_score >= 750 THEN 'low' WHEN credit_score >= 650 THEN 'medium' ELSE 'high' END as risk_segment FROM credit_profiles) SELECT risk_segment, COUNT(*) as customer_count FROM risk_segments GROUP BY risk_segment; 이 위험 세그먼트 분석 쿼리를 최적화해주세요",
+        "SELECT c.customer_id, c.name, cp.credit_score, COUNT(l.loan_id) as active_loans, SUM(l.remaining_balance) as total_debt FROM customers c JOIN credit_profiles cp ON c.customer_id = cp.customer_id LEFT JOIN loans l ON c.customer_id = l.customer_id AND l.status = 'active' GROUP BY c.customer_id, c.name, cp.credit_score; 이 고객 부채 조회 쿼리를 개선해주세요",
+        "SELECT payment_id, amount, payment_date, customer_id FROM payments WHERE payment_date BETWEEN '2023-01-01' AND '2023-03-31' AND status = 'failed' ORDER BY payment_date DESC; 이 실패한 결제 조회 쿼리에 인덱스를 추가하려면 어떻게 해야 하나요?",
+        "SELECT customer_id, COUNT(*) as inquiry_count FROM credit_inquiries WHERE inquiry_date >= DATEADD(month, -6, GETDATE()) GROUP BY customer_id HAVING COUNT(*) > 3; 이 신용 조회 분석 쿼리를 개선해주세요"
+    ],
+
+    "데이터_마이그레이션_SQL": [
+        "INSERT INTO new_customers SELECT * FROM old_customers; 이 마이그레이션 쿼리의 문제점은 무엇인가요?",
+        "CREATE TABLE credit_profiles_new AS SELECT * FROM credit_profiles; 이 테이블 복제 쿼리를 ANSI SQL 표준으로 변경해주세요",
+        "UPDATE new_customers SET status = 'active' WHERE customer_id IN (SELECT customer_id FROM old_customers WHERE last_activity_date > '2023-01-01'); 이 데이터 마이그레이션 쿼리를 최적화해주세요",
+        "INSERT INTO credit_scores_history SELECT customer_id, credit_score, 'initial_migration', GETDATE() FROM credit_profiles; 이 이력 데이터 마이그레이션 쿼리의 문제점은 무엇인가요?",
+        "SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'customers'; 이 스키마 조회 쿼리의 결과를 어떻게 활용할 수 있나요?",
+        "ALTER TABLE customers ADD last_credit_check_date DATE; 이 스키마 변경 쿼리를 안전하게 실행하는 방법은 무엇인가요?",
+        "INSERT INTO customers_backup SELECT * FROM customers WHERE created_at < '2022-01-01'; DELETE FROM customers WHERE created_at < '2022-01-01'; 이 데이터 아카이빙 쿼리를 트랜잭션으로 안전하게 실행하는 방법은 무엇인가요?",
+        "CREATE INDEX idx_credit_score ON credit_profiles(credit_score); 이 인덱스 생성 쿼리의 영향은 무엇인가요?",
+        "SELECT table_name, table_rows FROM information_schema.tables WHERE table_schema = 'credit_bureau'; 이 데이터베이스 크기 조회 쿼리를 데이터 마이그레이션 계획에 어떻게 활용할 수 있나요?",
+        "MERGE INTO target_customers t USING source_customers s ON (t.customer_id = s.customer_id) WHEN MATCHED THEN UPDATE SET t.name = s.name, t.email = s.email WHEN NOT MATCHED THEN INSERT (customer_id, name, email) VALUES (s.customer_id, s.name, s.email); 이 MERGE 문을 표준 SQL로 변환해주세요"
+    ]
 }
